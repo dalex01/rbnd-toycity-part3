@@ -1,0 +1,11 @@
+How long did you spend working on this project?
+I spent about 3 hour
+
+What was the most rewarding challenge you conquered?
+It seems that I am a little bit overqualified for this project. I didn't met any serious challenges. I learned OOP concepts in C, JS and Python languages before. In this project I learn more about Ruby syntax and I think it is the main knowledge I received.
+
+What two additional features did you build? Why?
+I added ability to return transaction for the customer. I implemented number of purchases and returns made by customers. And transactions can be found by product name now.
+
+Where do you still have room to grow?
+I suppose I need more challenging projects to sharpen my Ruby knowledge.
