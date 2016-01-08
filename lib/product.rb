@@ -28,6 +28,10 @@ class Product
   	return products_in_stock
   end
 
+  def purchase
+  	@stock -= 1
+  end
+
   private
 
   def add_to_products
