@@ -16,6 +16,7 @@ Product.all.count # Should return 3
 
 nanoblock = Product.find_by_title("Nano Block Empire State Building")
 firehouse = Product.find_by_title("LEGO Firehouse Headquarter")
+ironman = Product.find_by_title("LEGO Iron Man vs. Ultron")
 
 nanoblock.title # Should return 'Nano Block Empire State Building'
 nanoblock.price # Should return 49.99
@@ -62,5 +63,15 @@ Transaction.all.count # Should return 2
 transaction2 = Transaction.find(2)
 transaction2.product == nanoblock # Should return true
 
-walter.purchase(firehouse)
+#walter.purchase(firehouse)
 # Should return OutOfStockError: 'LEGO Firehouse Headquarter' is out of stock.
+
+walter.return(1, nanoblock)
+Transaction.find(1).returned == true # Should return true
+Transaction.find(1).returned == false # Should return true
+
+walter.purchase(ironman)
+nanoblock_transactions = Transaction.find_by_product(nanoblock).count # Should return only two nanoblock transactions
+
+walter.number_of_purchases # Should be 3
+walter.number_of_returns # Should be 1
